@@ -1,3 +1,8 @@
 # Imports GITLAB's default Auto DevOps template
 
 include: https://gitlab.com/gitlab-org/gitlab-ce/raw/v11.7.3/lib/gitlab/ci/templates/Auto-DevOps.gitlab-ci.yml
+
+
+stages:
+  - review
+
