@@ -1,0 +1,29 @@
+{
+  "name": "meeting-festival",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/pmlr/meeting-festival.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/pmlr/meeting-festival/issues"
+  },
+  "homepage": "https://gitlab.com/pmlr/meeting-festival#readme",
+  "devDependencies": {
+    "eslint": "^5.13.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "jest": "^24.1.0"
+  },
+  "dependencies": {
+    "eslint-plugin-jest": "^22.2.2",
+    "yarn": "^1.13.0"
+  }
+}
