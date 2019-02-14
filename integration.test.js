@@ -62,5 +62,4 @@ test('tests main flow', () => {
   postTransaction(queue, (q) => {
     q.endTransaction();
   });
-
 });
