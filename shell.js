@@ -1,3 +1,6 @@
+import SimpleAdapter from './adapters';
+import { WalletsDB } from './wallet';
+
 const Table = require('cli-table');
 
 // const readlineSync = require('readline-sync');
@@ -15,9 +18,13 @@ export default function startShell() {
 
       const table = new Table({ head: ['UID', 'Name', 'Funds'] });
 
-      JSON.parse(body).forEach(wallet => table.push([wallet.uid, wallet.name, wallet.funds]));
+      const wallets = JSON.parse(body);
+      const walletsdb = new WalletsDB(new SimpleAdapter());
+
+      wallets.forEach(wallet => table.push([wallet.uid, wallet.name, wallet.funds]));
 
       console.log(table.toString());
+
     },
   );
 
