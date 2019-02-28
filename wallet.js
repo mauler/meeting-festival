@@ -1,8 +1,9 @@
 import DB from './database';
 
 export default class Wallet {
-  constructor(uid, funds) {
+  constructor(uid, name, funds) {
     this.uid = uid;
+    this.name = name;
     this.funds = funds;
   }
 
@@ -18,6 +19,6 @@ export default class Wallet {
 export class WalletsDB extends DB {
   // eslint-disable-next-line class-methods-use-this
   makeRecord(row) {
-    return new Wallet(row.uid, row.funds);
+    return new Wallet(row.uid, row.name, row.funds);
   }
 }

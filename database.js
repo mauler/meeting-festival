@@ -7,8 +7,12 @@ export default class DB {
     return this.adapter.retrieveRecord(uid);
   }
 
+  list() {
+    return this.adapter.listRecords();
+  }
+
   loadJSON(source) {
-    source.forEach((row) => {
+    JSON.parse(source).forEach((row) => {
       const record = this.makeRecord(row);
       this.adapter.insertRecord(record);
     });

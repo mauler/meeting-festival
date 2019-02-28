@@ -20,6 +20,10 @@ export default class SimpleAdapter extends Adapter {
     this.db[record.uid] = record;
   }
 
+  listRecords() {
+    return Object.values(this.db);
+  }
+
   retrieveRecord(uid) {
     return this.db[uid];
   }

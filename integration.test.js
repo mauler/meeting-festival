@@ -10,18 +10,18 @@ test('tests main flow', () => {
   // Wallets sample
   const wallets = new WalletsDB(new SimpleAdapter());
 
-  wallets.loadJSON([
+  wallets.loadJSON(JSON.stringify([
     { uid: 666, name: 'Paulo', funds: 15 },
     { uid: 55, name: 'Roberto', funds: 15 },
-  ]);
+  ]));
 
   // Products sample
   const products = new ProductsDB(new SimpleAdapter());
 
-  products.loadJSON([
+  products.loadJSON(JSON.stringify([
     { uid: 1001, name: 'Beer', price: 5 },
     { uid: 1002, name: 'Vodka', price: 10 },
-  ]);
+  ]));
 
   // Queue sending transaction to the server
   const queue = new Queue();
