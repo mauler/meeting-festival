@@ -34,6 +34,6 @@ app.listen(
 
     populateWallets(1, 5);
 
-    startShell();
+    // startShell();
   },
 );
