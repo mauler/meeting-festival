@@ -2,6 +2,10 @@
 
 include: https://gitlab.com/gitlab-org/gitlab-ce/raw/v11.7.3/lib/gitlab/ci/templates/Auto-DevOps.gitlab-ci.yml
 
+test:
+  script:
+    - echo Tested!
+
 # variables:
 #   # TEST_DISABLED: "1"
 #   CODE_QUALITY_DISABLED: "1"
